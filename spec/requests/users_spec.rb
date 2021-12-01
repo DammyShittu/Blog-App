@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "Users", type: :request do
-  describe "GET /index" do
+RSpec.describe 'Users', type: :request do
+  describe 'GET /index' do
     before(:example) { get users_path }
 
     it 'checks if action returns correct response status' do
@@ -17,7 +17,7 @@ RSpec.describe "Users", type: :request do
     end
   end
 
-  describe "GET /show" do
+  describe 'GET /show' do
     before(:example) { get user_path(745) }
 
     it 'checks if action returns correct response status' do
