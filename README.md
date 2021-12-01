@@ -39,6 +39,7 @@ Single Post
 ## Built With
 
 - Ruby On Rails
+- Rspec Rails
 
 ## Version Control System
 
