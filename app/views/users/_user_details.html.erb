@@ -1,0 +1,10 @@
+
+  <div class="user_details">
+  <div  class="avatar">
+    <%= image_tag 'no_image.png', alt: "User #{user.id} image" %>
+  </div>
+    <div class="user_list">
+      <h2 class="user_name"><%= user.name %></h2>
+      <p class="num_post">Number of posts: <%= user.posts.size %></p>
+    </div>
+  </div>
