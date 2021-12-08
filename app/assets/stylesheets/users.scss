@@ -10,6 +10,32 @@ body {
   font-size: 18px;
 }
 
+.user_list,
+.bio,
+.all_posts li,
+.post {
+  border: 2px solid #333;
+  padding: 10px;
+}
+
+.all_posts {
+  margin: 40px auto;
+  padding: 0;
+
+  li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
 .user_card {
   height: auto;
   margin-top: 4%;
@@ -59,38 +85,12 @@ body {
   }
 }
 
-.user_list,
-.bio,
-.all_posts li,
-.post {
-  border: 2px solid #333;
-  padding: 10px;
-}
-
 .bio {
   padding: 15px;
 
   .bio_head {
     font-size: 32px;
-    padding-bottom: 10px
-  }
-}
-
-.all_posts {
-  margin: 40px auto;
-  padding: 0;
-
-  li {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 15px;
-  }
-
-  a {
-    text-decoration: none;
-    color: black;
+    padding-bottom: 10px;
   }
 }
 
