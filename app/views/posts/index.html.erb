@@ -1,1 +1,18 @@
-<h1>Here is the list of posts for a particular user</h1>
+<section>
+   <div class="user_card">
+    <%= render partial: "users/user_details", locals: { user: @user } %>
+  </div>
+
+  <div class="post_comments">
+   <% @posts.each do |p| %>
+   <ul class="all_posts posts">
+   <li>
+   <%= render partial: "post_details", locals: { post: p } %>
+   </li>
+   </ul>
+   <%= render partial: "comments_section", locals: { comments: p.recent_comments } %>
+   <% end %>
+   </div>
+
+   <button class="btn btn-1">Pagination</button>
+</section>

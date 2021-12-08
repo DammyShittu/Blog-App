@@ -1,1 +1,11 @@
-<h1>Here is a list of all users</h1>
+<section class="user_card">
+  <ul>
+    <% @users.each do |person| %>
+    <li>
+      <%= link_to user_path(person.id) do %>
+       <%= render partial: "user_details", locals: {user: person} %>
+      <% end %>
+      <% end %>
+    </li>
+  </ul>
+</section>
