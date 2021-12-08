@@ -6,19 +6,19 @@
 
 Home Page
 
-![](https://i.imgur.com/cnQDMto.png)
+![](https://i.imgur.com/XWa8tZz.png)
 
 User Profile Page
 
-![](https://i.imgur.com/TqtMaM0.png)
+![](https://i.imgur.com/hazmOpU.png)
 
 User Posts
 
-![](https://i.imgur.com/2PM0tZT.png)
+![](https://i.imgur.com/FnsfgYp.png)
 
 Single Post
 
-![](https://i.imgur.com/gOl0rac.png)
+![](https://i.imgur.com/vOXeS0N.png)
 
 ## Getting Started
 
@@ -33,6 +33,8 @@ Single Post
 - Run `yarn install` to install all dependencies
 
 - Run `rails db:create`, and `rails db:migrate`  to create database.
+
+- Run `rails db:seed` to populate the database with the data in the [seed](./db/seeds.rb) file.
 
 - Run `rails s` and go to http:localhost:3000 to view the app.
 
