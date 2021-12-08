@@ -1,3 +1,120 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.user_card {
+  height: auto;
+  margin-top: 4%;
+
+  ul {
+    margin: 40px auto;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin-bottom: 10px;
+
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+    }
+  }
+
+  .user_details {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    img {
+      width: 90%;
+      height: 90%;
+    }
+
+    .user_list {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        font-size: 30px;
+        font-weight: 600;
+      }
+
+      p {
+        align-self: end;
+      }
+    }
+  }
+}
+
+.user_list,
+.bio,
+.all_posts li,
+.post {
+  border: 2px solid #333;
+  padding: 10px;
+}
+
+.bio {
+  padding: 15px;
+
+  .bio_head {
+    font-size: 32px;
+    padding-bottom: 10px
+  }
+}
+
+.all_posts {
+  margin: 40px auto;
+  padding: 0;
+
+  li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.see_all {
+  text-align: center;
+  border: 1px solid #333;
+  text-decoration: none;
+  width: 12%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  padding: 10px 12px;
+  box-shadow: 3px 5px 2px #333;
+  font-size: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 300ms ease-in;
+
+  &:hover {
+    background: #333;
+    color: white;
+    opacity: 0.97;
+    transform: scale(0.97);
+  }
+}
