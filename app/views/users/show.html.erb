@@ -1,1 +1,19 @@
-<h1>Here is the profile of a particular user</h1>
+<div>
+  <div class="user_card">
+    <%= render partial: "user_details", locals: { user: @user } %>
+  </div>
+  <div class="bio">
+    <h2 class="bio_head">Bio</h2>
+    <p class="bio_text"><%= @user.bio %> </p>
+  </div>
+  <ul class="all_posts">
+    <% @user.recent_posts.each do |p| %>
+      <li class="post">
+        <%= render partial: "posts/post_details", locals: { post: p } %>
+      </li>
+    <% end %>
+  </ul>
+  <div class="actions">
+    <%= link_to "See all posts", user_posts_path(@user), class: "see_all" %>
+  <div>
+</div>
