@@ -1,1 +1,14 @@
-<h1>Here is one of the posts written by a user</h1>
+<div>
+  <div class="post">
+    <div class="post_head">
+        <h2 class="post__title"><%= @post.title %> by <%= @user.name %></h2>
+      <div class="post__likes_comments_counter">
+        <p class="show-li">Comments : <%= @post.comments.size%>  Likes : <%= @post.likes.size %> </p>
+      </div>
+    </div>
+    <p class="post__text"><%= @post.text %> </p>
+  </div>
+
+    <%= render partial: "comments_section", locals: { comments: @post.comments } %>
+
+</div>
