@@ -1,0 +1,7 @@
+  <%= link_to user_post_path(@user.id, post.id), id: "user_post#{post.id}" do %>
+    <h2 class="post__title"><%= post.title %></h2>
+  <% end %>
+  <p class="post__text"><%= post.text.first(500) %>  </p>
+  <div class="post__likes_comments_counter">
+    <p class="show-li">Comments : <%= post.comments.size.to_i%>  Likes : <%= post.likes.size.to_i %> </p>
+  </div>
