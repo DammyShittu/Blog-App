@@ -1,6 +1,6 @@
  <%= form_with model:[@post, @post.comments.build], method: :post, local: true do |form| %>
    <%= form.label :text, "Post A Comment" %><br>
-    <%= form.text_area :text, size:"60x5" %><br>
+    <%= form.text_area :text, size:"60x5", required: true %><br>
 
     <%= form.submit "Add Comment", data: {disable_with: "Commenting..."} %>
  <% end %>
