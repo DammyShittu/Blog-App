@@ -1,0 +1,15 @@
+<%= render "/users/back" %>
+<section class="create-post">
+  <h2>Create Post</h2>
+
+  <%= form_with model:[@current, @current.posts.build], html: {class: "post-form"}, method: :post, local: true do |form| %>
+    <div class="title">
+      <%= form.label :title, "Post Title" %>
+      <%= form.text_field :title, placeholder: "Your Title...", required: true %>
+    </div>
+
+    <%= form.text_area :text, size: "100x20", placeholder: "Type your post here...", required: true %>
+
+    <%= form.submit "Create Post", disable_with: "Please wait...", class: "post-btn" %>
+  <% end %>
+</section>

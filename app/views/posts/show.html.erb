@@ -1,4 +1,6 @@
 <div>
+  <%= render "/users/back" %>
+  <%= render "/users/home" %>
   <div class="post">
     <div class="post_head">
         <h2 class="post__title"><%= @post.title %> by <%= @user.name %></h2>
@@ -10,5 +12,6 @@
   </div>
 
     <%= render partial: "comments_section", locals: { comments: @post.comments } %>
-
+    <%= render "/comments/comment_form" %>
+    <%= render "/likes/like" %>
 </div>
