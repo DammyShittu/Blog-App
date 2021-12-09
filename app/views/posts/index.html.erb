@@ -1,6 +1,13 @@
 <section>
-   <div class="user_card">
-    <%= render partial: "users/user_details", locals: { user: @user } %>
+  <nav class="nav">
+    <div>
+      <%= render "/users/back" %>
+      <%= render "/users/home" %>
+    </div>
+    <%= link_to "New Post", new_user_post_path(@user.id) %>
+  </nav>
+  <div class="user_card">
+  <%= render partial: "users/user_details", locals: { user: @user } %>
   </div>
 
   <div class="post_comments">
