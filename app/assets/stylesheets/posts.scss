@@ -1,6 +1,14 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
 .all_comments {
   margin: 0;
   border: 2px solid #333;
@@ -12,16 +20,20 @@
   }
 }
 
-.btn {
+.btn,
+.create-post {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+}
+
+.btn {
   padding: 10px 20px;
   margin: 30px auto;
   box-shadow: 3px 5px 2px #333;
   font-size: 16px;
   cursor: pointer;
+  text-align: center;
 }
 
 .post {
@@ -34,4 +46,67 @@
     align-items: center;
     margin-bottom: 15px;
   }
+}
+
+.create-post {
+  flex-direction: column;
+  margin: 40px auto;
+
+  h2 {
+    padding-bottom: 25px;
+    font-size: 42px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .post-form,
+  .title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input,
+  textarea {
+    padding: 12px 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    outline: 0;
+    border: 1px solid #333;
+    caret-color: aquamarine;
+
+    &::placeholder {
+      font-style: italic;
+    }
+  }
+
+  .post-form {
+    gap: 20px;
+    justify-content: flex-start;
+    margin-top: 40px;
+
+    .title {
+      gap: 10px;
+
+      label {
+        font-size: 26px;
+        font-weight: 600;
+      }
+    }
+
+    .post-btn {
+      width: 15%;
+      margin: 10px auto;
+      cursor: pointer;
+      box-shadow: 3px 5px 2px #333;
+      transition: 300ms ease-in-out;
+
+      &:hover {
+        background-color: #333;
+        color: #f4f4f4;
+      }
+    }
+  }
+
 }
