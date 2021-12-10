@@ -1,9 +1,11 @@
 <div>
-<ul class="all_comments">
-  <% comments.each do |comment| %>
-    <li>
-      <h4><%= comment.author.name %>: <%= comment.text %></h4>
-    </li>
-  <% end %>
+<% unless comments.empty? %>
+  <ul class="all_comments">
+    <% comments.each do |comment| %>
+      <li>
+        <h4><%= comment.author.name %>: <%= comment.text %></h4>
+      </li>
+    <% end %>
+<% end %>
 </ul>
 </div>
