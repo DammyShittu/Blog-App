@@ -3,7 +3,7 @@
   <%= render "/users/home" %>
   <div class="post">
     <div class="post_head">
-        <h2 class="post__title"><%= @post.title %> by <%= @user.name %></h2>
+        <h2 class="post__title"><%= @post.title %> by <%= @post.author.name %></h2>
       <div class="post__likes_comments_counter">
         <p class="show-li">Comments : <%= @post.comments.size%>  Likes : <%= @post.likes.size %> </p>
       </div>

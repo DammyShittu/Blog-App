@@ -2,7 +2,7 @@
 <section class="create-post">
   <h2>Create Post</h2>
 
-  <%= form_with model:[@current, @current.posts.build], html: {class: "post-form"}, method: :post, local: true do |form| %>
+  <%= form_with model: @post, url: user_posts_path, scope: :post, html: {class: "post-form"} do |form| %>
     <div class="title">
       <%= form.label :title, "Post Title" %>
       <%= form.text_field :title, placeholder: "Your Title...", required: true %>
