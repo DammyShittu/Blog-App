@@ -1,11 +1,13 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @user = User.includes(:posts).find_by(id: params[:user_id])
     @posts = @user.recent_posts
   end
 
   def show
-    @user = User.find(params[:user_id])
+    @user = User.find_by(id: params[:user_id])
     @post = @user.posts.includes(:comments, :likes).find(params[:id])
   end
 
@@ -24,6 +26,15 @@ class PostsController < ApplicationController
           render :new, alert: 'Post not created. Please try again!'
         end
       end
+    end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    if @post.destroy
+      redirect_to user_posts_path(@post.author_id), notice: 'Post has been successfully deleted!'
+    else
+      redirect_to user_post_path(@post.user.id, @post.id), alert: 'Post not deleted. Please try again!'
     end
   end
 

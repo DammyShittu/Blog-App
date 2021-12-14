@@ -1,5 +1,4 @@
 <div>
-  <%# <%= render "/users/back" %>
   <%= link_to "Back", user_posts_path(@post.author.id) %>
   <%= render "/users/home" %>
   <div class="post">
@@ -12,7 +11,10 @@
     <p class="post__text"><%= @post.text %> </p>
   </div>
 
-    <%= render partial: "comments_section", locals: { comments: @post.comments } %>
+    <%= render partial: "/comments/comments_section", locals: { comments: @post.comments } %>
     <%= render "/comments/comment_form" %>
     <%= render "/likes/like" %>
+    <% if can? :destroy, @post %>
+      <%= button_to "Delete", user_post_path(@post.author.id, @post.id), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger"%>
+    <% end %>
 </div>
