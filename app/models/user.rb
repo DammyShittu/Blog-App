@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
@@ -10,13 +9,13 @@ class User < ApplicationRecord
   has_many :comments, foreign_key: 'author_id', dependent: :destroy
   has_many :likes, foreign_key: 'author_id', dependent: :destroy
 
-  Roles = [ :admin , :default ]
+  ROLES = %i[admin default].freeze
 
   def recent_posts
     posts.limit(3).order(created_at: :desc)
   end
 
-  def is?( requested_role )
-    self.role == requested_role.to_s
+  def is?(requested_role)
+    role == requested_role.to_s
   end
 end

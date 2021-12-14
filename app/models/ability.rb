@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
@@ -16,7 +14,7 @@ class Ability
       can :destroy, Comment do |comment|
         comment.author == user
       end
-      can %i(read create), :all
+      can %i[read create], :all
     end
   end
 end
