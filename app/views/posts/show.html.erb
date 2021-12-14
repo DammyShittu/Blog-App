@@ -1,5 +1,6 @@
 <div>
-  <%= render "/users/back" %>
+  <%# <%= render "/users/back" %>
+  <%= link_to "Back", user_posts_path(@post.author.id) %>
   <%= render "/users/home" %>
   <div class="post">
     <div class="post_head">
