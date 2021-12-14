@@ -2,5 +2,5 @@
    <%= form.label :text, "Post A Comment" %><br>
     <%= form.text_area :text, size:"60x5", required: true %><br>
 
-    <%= form.submit "Add Comment", data: {disable_with: "Commenting..."} %>
+    <%= form.submit "Add Comment", data: {disable_with: "Commenting..."}, class: "btn btn-primary" %>
  <% end %>
