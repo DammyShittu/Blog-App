@@ -1,17 +1,15 @@
 require 'rails_helper'
-
+# rubocop:disable Metrics/BlockLength
 RSpec.feature 'Posts #Show', type: :feature do
   background do
     visit new_user_session_path
 
     @user1 = User.create(name: 'Adedamola Shittu', bio: 'Software Developer',
                          photo: 'http://www.pselaw.com/wp-content/uploads/2016/08/pokemon-150x150.jpg',
-                         email: 'johndoe24@gmail.com', password: 'password', confirmed_at: Time.now
-                        )
+                         email: 'johndoe24@gmail.com', password: 'password', confirmed_at: Time.now)
     @user2 = User.create(name: 'Amine Smahi', bio: 'Software Developer',
                          photo: 'http://www.pselaw.com/wp-content/uploads/2016/08/pokemon-150x150.jpg',
-                         email: 'amine@gmail.com', password: 'willpower', confirmed_at: Time.now
-                        )
+                         email: 'amine@gmail.com', password: 'willpower', confirmed_at: Time.now)
 
     within 'form' do
       fill_in 'Email', with: @user1.email
@@ -62,11 +60,8 @@ RSpec.feature 'Posts #Show', type: :feature do
 
   scenario 'show body of the post' do
     @post = Post.create(title: 'How To unit test with Rspec',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Pellentesque justo ligula, elementum ac mattis et, vulputate ac nibh.
-                        Phasellus fringilla blandit molestie. Donec tincidunt commodo magna.
-                        Proin iaculis cursus', author_id: @user2.id
-                      )
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', author_id: @user2.id)
+
     find("a[href='#{user_path(@user2.id)}']").click
     find("a[href='#{user_posts_path(@user2.id)}']").click
     find("a[href='#{user_post_path(@user2.id, @post.id)}']").click
@@ -103,4 +98,5 @@ RSpec.feature 'Posts #Show', type: :feature do
     expect(page).to have_content @comment2.text
     expect(page).to have_content @comment3.text
   end
+  # rubocop:enable Metrics/BlockLength
 end

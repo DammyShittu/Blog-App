@@ -6,16 +6,13 @@ RSpec.feature 'Users Page' do
       visit new_user_session_path
       @user1 = User.create(name: 'Adedamola Shittu', bio: 'Software Developer',
                            photo: 'http://www.pselaw.com/wp-content/uploads/2016/08/pokemon-150x150.jpg',
-                           email: 'johndoe24@gmail.com', password: 'password', confirmed_at: Time.now
-                          )
+                           email: 'johndoe24@gmail.com', password: 'password', confirmed_at: Time.now)
       @user2 = User.create(name: 'Henry Eze', bio: 'Software Developer',
                            photo: 'http://www.pselaw.com/wp-content/uploads/2016/08/pokemon-150x150.jpg',
-                           email: 'kchenry@gmail.com', password: 'passion', confirmed_at: Time.now
-                          )
+                           email: 'kchenry@gmail.com', password: 'passion', confirmed_at: Time.now)
       @user3 = User.create(name: 'Julie Ify', bio: 'Software Developer',
                            photo: 'http://www.pselaw.com/wp-content/uploads/2016/08/pokemon-150x150.jpg',
-                           email: 'ifyjuls@gmail.com', password: 'willpower', confirmed_at: Time.now
-                          )
+                           email: 'ifyjuls@gmail.com', password: 'willpower', confirmed_at: Time.now)
       within 'form' do
         fill_in 'Email', with: @user1.email
         fill_in 'Password', with: @user1.password
