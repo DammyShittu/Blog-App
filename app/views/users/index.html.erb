@@ -2,7 +2,7 @@
   <ul>
     <% @users.order(:created_at).each do |person| %>
     <li>
-      <%= link_to user_path(person.id) do %>
+      <%= link_to "#{person.id}", user_path(person.id) do %>
        <%= render partial: "user_details", locals: {user: person} %>
       <% end %>
       <% end %>
