@@ -2,8 +2,8 @@ class Api::V1::CommentsController < ApplicationController
   load_and_authorize_resource
 
   def index
-    id = params[:post_id]
-    @comments = Comment.where({ post_id: id }).order(:created_at)
+    new_id = params[:post_id]
+    @comments = Comment.where({ post_id: new_id }).order(:created_at)
     render json: { data: { comments: @comments } }, status: :ok
   end
 
