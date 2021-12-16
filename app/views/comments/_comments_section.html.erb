@@ -1,0 +1,14 @@
+<div>
+<% unless comments.empty? %>
+  <ul class="all_comments">
+    <% comments.each do |comment| %>
+      <li class="d-flex justify-content-between align-items-center w-4 mx-auto">
+        <h4><%= comment.author.name %>: <%= comment.text %></h4>
+        <% if can? :destroy, comment %>
+        <%= button_to "Delete", post_comment_path(comment.post_id, comment.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"%>
+        <% end %>
+      </li>
+    <% end %>
+</ul>
+<% end %>
+</div>

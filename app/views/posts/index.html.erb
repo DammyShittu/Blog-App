@@ -17,7 +17,7 @@
    <%= render partial: "post_details", locals: { post: p } %>
    </li>
    </ul>
-   <%= render partial: "comments_section", locals: { comments: p.recent_comments } %>
+   <%= render partial: "/comments/comments_section", locals: { comments: p.recent_comments } %>
    <% end %>
    </div>
 

@@ -1,0 +1,37 @@
+example_id                                    | status | run_time               |
+--------------------------------------------- | ------ | ---------------------- |
+./spec/views/login/login_spec.rb[1:1]         | passed | 0.08249 seconds        |
+./spec/views/login/login_spec.rb[1:2]         | passed | 1 minute 17.26 seconds |
+./spec/views/login/login_spec.rb[1:3]         | passed | 0.04935 seconds        |
+./spec/views/login/login_spec.rb[1:4:1]       | passed | 1.42 seconds           |
+./spec/views/login/login_spec.rb[1:4:2]       | passed | 0.06373 seconds        |
+./spec/views/login/login_spec.rb[1:4:3]       | passed | 2.68 seconds           |
+./spec/views/posts/posts_index_spec.rb[1:1]   | passed | 0.15179 seconds        |
+./spec/views/posts/posts_index_spec.rb[1:2]   | passed | 0.65189 seconds        |
+./spec/views/posts/posts_index_spec.rb[1:3]   | passed | 0.23411 seconds        |
+./spec/views/posts/posts_index_spec.rb[1:4]   | passed | 1.64 seconds           |
+./spec/views/posts/posts_index_spec.rb[1:5]   | passed | 0.20357 seconds        |
+./spec/views/posts/posts_index_spec.rb[1:6]   | passed | 0.1975 seconds         |
+./spec/views/posts/posts_index_spec.rb[1:7]   | passed | 0.39762 seconds        |
+./spec/views/posts/posts_index_spec.rb[1:8]   | passed | 0.25459 seconds        |
+./spec/views/posts/posts_index_spec.rb[1:9]   | passed | 0.19448 seconds        |
+./spec/views/posts/posts_index_spec.rb[1:10]  | passed | 0.24593 seconds        |
+./spec/views/posts/posts_show_spec.rb[1:1]    | passed | 0.25015 seconds        |
+./spec/views/posts/posts_show_spec.rb[1:2]    | passed | 0.22927 seconds        |
+./spec/views/posts/posts_show_spec.rb[1:3]    | passed | 1 minute 35.32 seconds |
+./spec/views/posts/posts_show_spec.rb[1:4]    | passed | 0.34688 seconds        |
+./spec/views/posts/posts_show_spec.rb[1:5]    | passed | 0.19845 seconds        |
+./spec/views/posts/posts_show_spec.rb[1:6]    | passed | 0.23281 seconds        |
+./spec/views/posts/posts_show_spec.rb[1:7]    | passed | 0.30562 seconds        |
+./spec/views/users/users_index_spec.rb[1:1:1] | passed | 0.47709 seconds        |
+./spec/views/users/users_index_spec.rb[1:1:2] | passed | 0.1279 seconds         |
+./spec/views/users/users_index_spec.rb[1:1:3] | passed | 0.12121 seconds        |
+./spec/views/users/users_index_spec.rb[1:1:4] | passed | 0.14827 seconds        |
+./spec/views/users/users_show_spec.rb[1:1]    | passed | 0.12479 seconds        |
+./spec/views/users/users_show_spec.rb[1:2]    | passed | 0.13702 seconds        |
+./spec/views/users/users_show_spec.rb[1:3]    | passed | 0.15794 seconds        |
+./spec/views/users/users_show_spec.rb[1:4]    | passed | 0.14944 seconds        |
+./spec/views/users/users_show_spec.rb[1:5]    | passed | 0.18303 seconds        |
+./spec/views/users/users_show_spec.rb[1:6]    | passed | 0.15689 seconds        |
+./spec/views/users/users_show_spec.rb[1:7]    | passed | 0.18937 seconds        |
+./spec/views/users/users_show_spec.rb[1:8]    | passed | 0.22877 seconds        |

@@ -1,3 +1,3 @@
 <%= form_with model:[@post, @post.likes.build] do |f|%>
-    <%= f.submit "Like this post", data: {disable_with: "💖"} %>
+    <%= f.submit "Like this post", data: {disable_with: "💖"}, class: "btn btn-success" %>
 <%end%>
