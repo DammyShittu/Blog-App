@@ -4,7 +4,7 @@ class Api::V1::CommentsController < ApplicationController
   def index
     id = params[:post_id]
     @comments = Comment.where({ post_id: id }).order(:created_at)
-    render json: { data: {comments: @comments} }
+    render json: { data: {comments: @comments} }, status: :ok
   end
 
   def create
