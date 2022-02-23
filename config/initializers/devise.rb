@@ -10,7 +10,7 @@
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
   config.jwt do |jwt|
-    jwt.secret = '2c7c57930d8ecacaa0d2d48f8966bf13cddd00e1bdf3ae4f65d047a20fefe4b58aed562a88f47d8b78548195ec91cf3e219c12dd3efa597b8f8c309884bed8f0'
+    jwt.secret = Rails.application.credentials.dig(:secret, :jwt_secret)
   end
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
@@ -27,7 +27,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'shittuadedamola@rocketmail.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
